@@ -10,6 +10,8 @@ exports.calculate = function(req, res) {
     res.json({ error: err.message });
   });
 
+  // Using + operator to type cast variables as integer in order toprevent string concatenation.
+  
   var operations = {
     'add':      function(a,b) { return +a + +b },
     'subtract': function(a,b) { return a - b },
